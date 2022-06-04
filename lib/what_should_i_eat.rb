@@ -8,15 +8,12 @@ module WhatShouldIEat
 
   class Error < StandardError; end
 
-  class Recipe 
-    def self.getRecipe
-      result = HTTP.get('https://www.edamam.com/search?type=Feeds').to_s
-      recipes = JSON.parse(result)
-      title = recipes.first['items'].first['label']
-      url = recipes.first['items'].first['url']
-      puts title
-      puts url
-    end
-    # puts getRecipe
+  def WhatShouldIEat.recipe 
+    result = HTTP.get('https://www.edamam.com/search?type=Feeds').to_s
+    recipes = JSON.parse(result)
+    title = recipes.first['items'].first['label']
+    url = recipes.first['items'].first['url']
+    Printing.print title, url
   end
+
 end

@@ -2,4 +2,4 @@
 
 require "what_should_i_eat"
 
-WhatShouldIEat.Recipe.getRecipe
+WhatShouldIEat.recipe
