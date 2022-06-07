@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    what_should_i_eat (0.1.0)
+    what_should_i_eat (0.2.0)
       http
 
 GEM
